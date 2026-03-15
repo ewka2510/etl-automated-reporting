@@ -104,3 +104,26 @@ automation
 This project demonstrates a practical example of a **data workflow combining data transformation and process automation**.
 
 Raw operational data is transformed into a clean analytical dataset and automatically delivered to end users through personalized email reports.
+
+        RAW DATA
+   (CSV / Excel files)
+            │
+            ▼
+     Power Query (Excel)
+  - Data cleaning
+  - Filtering
+  - Aggregation
+  - Merging tables
+            │
+            ▼
+     Final Output Table
+   (Agent Performance Metrics)
+            │
+            ▼
+      Power Automate
+   - Read table rows
+   - Generate HTML report
+   - Send individual email
+            │
+            ▼
+     Agent Email Report
