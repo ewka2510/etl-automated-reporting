@@ -1,0 +1,309 @@
+<table cellpadding="0" cellspacing="0" style="background:#f4f6f9; padding:10px; width:100%;">
+  <tbody><tr>
+    <td>
+      <table cellpadding="0" cellspacing="0" style="background:white; padding:15px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; width:100%;">
+        
+        <tbody><tr>
+          <td>
+            <h2 style="color:#FF6F00; font-size:20px; margin: 0 0 8px 0;">
+              🎉 Hello @{items('For_each')?['Agent_Name']}👋
+            </h2>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p style="font-size:15px; color:#333; line-height:1.2; margin: 0 0 10px 0;">
+              Thank you for your amazing support last week! 💪<br>
+              <b style="font-size:15px; color:#FF5722;">
+                Your contribution helped complete @{items('For_each')?['Team_Agents_x002e_Total_Cases_Handled']} loads – fantastic! 🔥
+              </b>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p style="font-size:13px; color:#555; margin: 0;">Let’s keep the momentum going! 🌟</p>
+          </td>
+        </tr>
+
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+
+<img src="https://i.pinimg.com/originals/73/f8/b5/73f8b536269218112403b96af0d938eb.gif" alt="Delivery" style="display:block; width:120px; margin:8px auto;">
+
+<h3 style="margin-top:20px;">📊 Cases Summary</h3>
+
+<table cellpadding="8" cellspacing="0" style="text-align:center; width:100%;">
+<tbody><tr>
+
+<!-- CASES SECTION -->
+</tr></tbody></table><table cellpadding="0" cellspacing="0" border="0" style="width:100%; table-layout:fixed; border-collapse:collapse;">
+  <tbody>
+    <tr>
+
+      <!-- Shipper Cases -->
+<td style="background:#dbe5ff; border-radius:10px; padding:10px 5px; text-align:center; height:60px;">
+  <div style="font-size:22px; font-weight:700; color:#0b5ed7; line-height:22px;">
+    @{items('For_each')?['Team_Agents_x002e_Shipper_Cases']}
+  </div>
+  <div style="font-size:12px; font-weight:600; color:#1f2d3d; line-height:14px;">
+    Shipper Cases
+  </div>
+</td>
+
+<!-- Carrier Cases -->
+<td style="background:#d4f4e0; border-radius:10px; padding:10px 5px; text-align:center; height:60px;">
+  <div style="font-size:22px; font-weight:700; color:#087f5b; line-height:22px;">
+    @{items('For_each')?['Team_Agents_x002e_Carrier_Cases']}
+  </div>
+  <div style="font-size:12px; font-weight:600; color:#1f2d3d; line-height:14px;">
+    Carrier Cases
+  </div>
+</td>
+
+<!-- Internal Cases -->
+<td style="background:#fff4d6; border-radius:10px; padding:10px 5px; text-align:center; height:60px;">
+  <div style="font-size:22px; font-weight:700; color:#e67700; line-height:22px;">
+    @{items('For_each')?['Team_Agents_x002e_Internal_Cases']}
+  </div>
+  <div style="font-size:12px; font-weight:600; color:#1f2d3d; line-height:14px;">
+    Internal Cases
+  </div>
+</td>
+
+<!-- Total Cases -->
+<td style="background:#e9e0f7; border-radius:10px; padding:10px 5px; text-align:center; height:60px;">
+  <div style="font-size:24px; font-weight:800; color:#5f3dc4; line-height:22px;">
+    @{items('For_each')?['Team_Agents_x002e_Total_Cases_Handled']}
+  </div>
+  <div style="font-size:12px; font-weight:700; color:#1f2d3d; line-height:14px;">
+    Total Cases
+  </div>
+</td>
+
+    </tr>
+  </tbody>
+</table>
+
+<!-- REGIONS SECTION -->
+<h3 style="margin-top:20px; font-family: Arial, sans-serif;">🌍 Regions</h3>
+
+<table cellpadding="0" cellspacing="0" border="0" style="width:100%; table-layout:fixed; border-collapse:collapse;">
+  <tbody>
+    <tr>
+
+      <!-- MEU Region -->
+      <td style="background:#d4f4e0; color:#146EB4; padding:10px 5px; text-align:center; font-weight:bold; font-size:18px; font-family:Arial, sans-serif; border-radius:10px 0 0 10px; white-space:nowrap;">
+        MEU Region: @{items('For_each')?['Team_Agents_x002e_MEU_Region_Cases']}
+      </td>
+
+      <!-- UK Region -->
+      <td style="background:#fff4d6; color:#b38600; padding:10px 5px; text-align:center; font-weight:bold; font-size:18px; font-family:Arial, sans-serif; border-radius:0 10px 10px 0; white-space:nowrap;">
+        UK Region: @{items('For_each')?['Team_Agents_x002e_UK_Region_Cases']}
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+
+<h3 style="margin-top:20px;">📧 Email Summary</h3>
+<table cellpadding="8" cellspacing="0" style="width:300px; border-collapse: collapse; text-align:left; font-family:Arial, sans-serif;">
+  <tbody><tr style="background:#f4f6f9;">
+    <th style="border:1px solid #ddd; padding:6px 10px;">Metric</th>
+    <th style="border:1px solid #ddd; padding:6px 10px;">Value</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid #ddd; padding:6px 10px;">Inbound Emails</td>
+    <td style="border:1px solid #ddd; padding:6px 10px;">@{items('For_each')?['Team_Agents_x002e_no_of_inbound_email_contacts']}</td>
+  </tr>
+  <tr style="background:#f4f6f9;">
+    <td style="border:1px solid #ddd; padding:6px 10px;">Outbound Emails</td>
+    <td style="border:1px solid #ddd; padding:6px 10px;">@{items('For_each')?['Team_Agents_x002e_no_of_outbound_email_contacts']}</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid #ddd; padding:6px 10px;">Resolved 1st Contact</td>
+    <td style="border:1px solid #ddd; padding:6px 10px;">@{items('For_each')?['Team_Agents_x002e_Resolved_at_fiest_contact']}</td>
+  </tr>
+  <tr style="background:#f4f6f9;">
+    <td style="border:1px solid #ddd; padding:6px 10px;">Reopened Cases</td>
+    <td style="border:1px solid #ddd; padding:6px 10px;">@{items('For_each')?['Team_Agents_x002e_Reopened_Cases']}</td>
+  </tr>
+  <tr>
+    <td style="border:1px solid #ddd; padding:6px 10px;">Severity 3 Cases</td>
+    <td style="border:1px solid #ddd; padding:6px 10px;">@{items('For_each')?['Team_Agents_x002e_Severity_3_Cases']}</td>
+  </tr>
+  <tr style="background:#f4f6f9;">
+    <td style="border:1px solid #ddd; padding:6px 10px;">Severity 4 Cases</td>
+    <td style="border:1px solid #ddd; padding:6px 10px;">@{items('For_each')?['Team_Agents_x002e_Severity_4_Cases']}</td>
+  </tr>
+</tbody></table>
+
+<h3 style="margin-top:20px;">📊 Additional Cases Metrics</h3>
+
+<div style="margin-bottom:10px;">
+  <div style="font-weight:bold; margin-bottom:4px;">Chinese Lobby: @{items('For_each')?['Team_Agents_x002e_Chinese_Lobby_Queue']} cases</div>
+  <div style="height:16px; background:#e0e0e0; border-radius:10px; overflow:hidden;">
+    <div style="height:16px; width:@{items('For_each')?['Team_Agents_x002e_Chinese_Lobby_Queue']}%; background:#66c2ff;"></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;">
+  <div style="font-weight:bold; margin-bottom:4px;">Carrier Holds: @{items('For_each')?['Team_Agents_x002e_Carrier_Holds_Queue']} cases</div>
+  <div style="height:16px; background:#e0e0e0; border-radius:10px; overflow:hidden;">
+    <div style="height:16px; width:@{items('For_each')?['Team_Agents_x002e_Carrier_Holds_Queue']}%; background:#66c2ff;"></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;">
+  <div style="font-weight:bold; margin-bottom:4px;">EU OPS: @{items('For_each')?['Team_Agents_x002e_EU_OPS_Queue']} cases</div>
+  <div style="height:16px; background:#e0e0e0; border-radius:10px; overflow:hidden;">
+    <div style="height:16px; width:@{items('For_each')?['Team_Agents_x002e_EU_OPS_Queue']}%; background:#66c2ff;"></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;">
+  <div style="font-weight:bold; margin-bottom:4px;">UK OPS: @{items('For_each')?['Team_Agents_x002e_UK_OPS_Queue']} cases</div>
+  <div style="height:16px; background:#e0e0e0; border-radius:10px; overflow:hidden;">
+    <div style="height:16px; width:@{items('For_each')?['Team_Agents_x002e_UK_OPS_Queue']}%; background:#66c2ff;"></div>
+  </div>
+</div>
+
+<div style="margin-bottom:10px;">
+  <div style="font-weight:bold; margin-bottom:4px;">DE OPS: @{items('For_each')?['Team_Agents_x002e_DE_OPS_Queue']} cases</div>
+  <div style="height:16px; background:#e0e0e0; border-radius:10px; overflow:hidden;">
+    <div style="height:16px; width:@{items('For_each')?['Team_Agents_x002e_DE_OPS_Queue']}%; background:#66c2ff;"></div>
+  </div>
+</div>
+
+<h3 style="margin-top:20px;">📞 Calls</h3>
+
+<div style="background:@{if(equals(int(item()?['Calls_Final_x002e_Calls_Aggregated_Missed_Merged_x002e_Missed_Calls_x002e_missed_calls_for_agent']), 0), '#28a745', if(equals(int(item()?['Calls_Final_x002e_Calls_Aggregated_Missed_Merged_x002e_Missed_Calls_x002e_missed_calls_for_agent']), 1), '#FFA500', '#FF4D6D'))}; 
+            color:white; 
+            padding:12px; 
+            border-radius:8px; 
+            text-align:center; 
+            font-size:16px; 
+            font-weight:bold; 
+            margin-bottom:12px;">
+    Missed Calls: @{items('For_each')?['Calls_Final_x002e_Calls_Aggregated_Missed_Merged_x002e_Missed_Calls_x002e_missed_calls_for_agent']}
+</div>
+
+<!-- Standard Call Stats -->
+<div style="margin-bottom:10px;">
+    <div><b>Time Supporting Partners by Phone:</b> @{items('For_each')?['Calls_Final_x002e_Calls_Aggregated_Missed_Merged_x002e_Team_Agents_x002e_Total_Call_Time_Final']}</div>
+    <div><b>Total Incoming Calls:</b> @{items('For_each')?['Total_Incoming_Calls']}</div>
+    <div><b>Total Outbound Calls:</b> @{items('For_each')?['Total_Outbound_Calls']}</div>
+</div>
+
+<!-- Octopus Times with Amazon Colors -->
+<table cellpadding="0" cellspacing="0" border="0" style="margin-top:10px; table-layout: fixed; border-collapse: separate; border-spacing: 10px 0; width:100%;">
+    <tbody>
+        <tr>
+            <!-- Online Time -->
+            <td style="background:#146EB4; color:white; padding:10px; border-radius:8px; width:25%; min-height:70px; text-align:center; vertical-align:middle;">
+                <span style="font-size:13px; font-weight:bold;">Online Time</span><br>
+                <span style="font-size:14px;">@{items('For_each')?['Calls_Final_x002e_Calls_raw_Octopus_Aggregated_x002e_Online_Time_Display']}</span>
+            </td>
+
+            <!-- On Project Time -->
+            <td style="background:#FF9900; color:white; padding:10px; border-radius:8px; width:25%; min-height:70px; text-align:center; vertical-align:middle;">
+                <span style="font-size:13px; font-weight:bold;">On Project Time</span><br>
+                <span style="font-size:14px;">@{items('For_each')?['Calls_Final_x002e_Calls_raw_Octopus_Aggregated_x002e_On_Project_time_Display']}</span>
+            </td>
+
+            <!-- AT Fixed Task Time -->
+            <td style="background:#146f3d; color:white; padding:10px; border-radius:8px; width:25%; min-height:70px; text-align:center; vertical-align:middle;">
+                <span style="font-size:13px; font-weight:bold;">At Fixed Task Time</span><br>
+                <span style="font-size:14px;">@{items('For_each')?['Calls_Final_x002e_Calls_raw_Octopus_Aggregated_x002e_Fixed_Time_Display']}</span>
+            </td>
+
+            <!-- In Training Time -->
+            <td style="background:#232F3E; color:white; padding:10px; border-radius:8px; width:25%; min-height:70px; text-align:center; vertical-align:middle;">
+                <span style="font-size:13px; font-weight:bold;">In Training Time</span><br>
+                <span style="font-size:14px;">@{items('For_each')?['Calls_Final_x002e_Calls_raw_Octopus_Aggregated_x002e_In_Training_Time_Display']}</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 style="margin-top:20px;">📈 Performance Metrics</h3>
+
+
+<!-- COMPLEXITY -->
+<div style="margin-bottom:15px;">
+<table cellpadding="0" cellspacing="0">
+<tbody><tr>
+  <td style="font-size:13px; display:flex; justify-content:space-between;">
+    <b>Complex Cases %</b> &nbsp;
+    @{items('For_each')?['Team_Agents_x002e_Complex_Percent_Display']}
+  </td>
+</tr>
+</tbody></table>
+<div style="height:6px;"></div>
+<div style="background:#e0e0e0; border-radius:10px; height:16px; overflow:hidden;">
+  <div style="background:#6f42c1; height:16px; width:@{items('For_each')?['Team_Agents_x002e_Complex_Percent_Display']}%;"></div>
+</div>
+</div>
+
+<!-- TTFR CUSTOMER -->
+<div style="margin-bottom:15px;">
+<table cellpadding="0" cellspacing="0">
+<tbody><tr>
+  <td style="font-size:13px; display:flex; justify-content:space-between;">
+    <b>TTFR Customer SLA %</b>&nbsp;
+    @{items('For_each')?['Team_Agents_x002e_%TTFR_Customer_Hit_Display']}
+  </td>
+</tr>
+</tbody></table>
+<div style="height:6px;"></div>
+<div style="background:#e0e0e0; border-radius:10px; height:16px; overflow:hidden;">
+  <div style="background:#28a745; height:16px; width:@{items('For_each')?['Team_Agents_x002e_%TTFR_Customer_Hit_Display']}%;"></div>
+</div>
+</div>
+
+<!-- TTFR TEAM -->
+<div style="margin-bottom:15px;">
+<table cellpadding="0" cellspacing="0">
+<tbody><tr>
+  <td style="font-size:13px; display:flex; justify-content:space-between;">
+    <b>TTFR Team SLA %</b>&nbsp;
+    @{items('For_each')?['Team_Agents_x002e_%TTFR_Team_Hit_Display']}
+  </td>
+</tr>
+</tbody></table>
+<div style="height:6px;"></div>
+<div style="background:#e0e0e0; border-radius:10px; height:16px; overflow:hidden;">
+  <div style="background:#ffc107; height:16px; width:@{items('For_each')?['Team_Agents_x002e_%TTFR_Team_Hit_Display']}%;"></div></div>
+</div>
+
+<!-- TTR SLA -->
+<div style="margin-bottom:15px;">
+  <table cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td style="font-size:13px; display:flex; justify-content:space-between;">
+          <b>TTR SLA %</b>&nbsp;
+          @{items('For_each')?['Team_Agents_x002e_%TTR_SLA_Hit_Display']}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="height:6px;"></div>
+
+  <div style="background:#e0e0e0; border-radius:10px; height:16px; overflow:hidden;">
+    <div style="background:#dc3545; height:16px; width:@{items('For_each')?['Team_Agents_x002e_%TTR_SLA_Hit_Display']}%;"></div>
+  </div>
+</div>
+
+<!-- MOTIVATIONAL FOOTER -->
+<div style="margin-top:20px; font-family: Arial, sans-serif; text-align:center;">
+  <p style="font-size:16px; font-weight:600; color:#146EB4; line-height:1.4;">
+    🚀 Your effort makes a real difference – great team contribution!
+  </p>
+</div>
