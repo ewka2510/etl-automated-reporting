@@ -1,37 +1,106 @@
-## ETL Process – Data Transformation and Automated Reporting
+# ETL Agent Performance Reporting
 
-This project demonstrates a simple ETL (Extract, Transform, Load) process combined with automated reporting.
+## Project Overview
 
-### Data Sources
-The process starts with **three source tables** stored in **CSV and Excel files**.  
-These files contain operational data used to calculate weekly performance metrics.
+This project demonstrates a simple **ETL (Extract, Transform, Load) pipeline** combined with automated reporting.
 
-### Data Transformation (Power Query in Excel)
-The data is transformed using **Power Query in Excel**, where the following steps are applied:
+The workflow processes raw operational data from multiple sources, transforms it into a structured dataset using **Power Query in Excel**, and automatically sends **personalized performance reports** to agents using **Power Automate**.
 
-- Data cleaning
-- Filtering unnecessary records
-- Standardizing columns
-- Grouping and aggregating data
-- Combining multiple tables
+The goal of the project is to show how raw data can be transformed into actionable insights and distributed automatically.
 
-The result of the transformation is **one clean, structured output table** containing the final metrics.
+---
 
-### Automation (Power Automate)
-After the data is prepared, **Power Automate** is used to automate the reporting process.
+## Data Sources (Extract)
 
-The flow performs the following steps:
+The process starts with **three source tables** stored in **CSV and Excel files**.
 
-1. Reads rows from the final output table.
-2. Processes each row individually.
-3. Sends an **individual HTML email** to each agent.
+These datasets contain operational information used to calculate agent performance metrics.
 
-Each email contains the **agent's personal weekly performance metrics**, automatically generated based on the data from the output table.
+The raw files are stored in the repository in the `data/raw` folder.
 
-### Outcome
-This solution demonstrates how to combine:
-- **Excel (Power Query)** for data transformation
-- **Power Automate** for workflow automation
-- **HTML email formatting** for personalized reporting
+---
 
-The result is an automated pipeline that transforms raw data into clean insights and delivers them directly to the relevant recipients.
+## Data Transformation (Transform)
+
+Data transformation is performed in **Excel using Power Query**.
+
+The three source tables are imported into Power Query and processed through several transformation stages.
+
+Each dataset is first cleaned and prepared individually before being combined with the others.
+
+Main transformation steps include:
+
+* Cleaning and standardizing raw data
+* Removing incomplete or irrelevant records
+* Filtering datasets
+* Creating aggregated versions of the source tables
+* Merging multiple datasets into one combined table
+* Grouping and calculating performance metrics
+
+The transformation process contains multiple **intermediate query steps**, such as cleaned tables, aggregated datasets, and merged tables.
+
+These steps ultimately produce **one final structured output table** used for reporting.
+
+---
+
+## Final Output (Load)
+
+The transformation process results in a **single clean output table** containing performance metrics for each agent.
+
+This table serves as the input dataset for the automated reporting process.
+
+The final table is stored in the `data/output` folder.
+
+---
+
+## Automation (Power Automate)
+
+After the dataset is prepared, **Power Automate** is used to automate the reporting process.
+
+The automation flow performs the following steps:
+
+1. Reads rows from the final output table
+2. Processes each row individually
+3. Generates a personalized HTML report
+4. Sends an **individual email to each agent** containing their weekly performance metrics
+
+This ensures that each agent receives a **custom report based on their own weekly data**.
+
+---
+
+## ETL Pipeline Summary
+
+1. **Extract** – Import raw data from three source tables (CSV and Excel).
+2. **Transform** – Clean, filter, aggregate, and merge datasets using Power Query.
+3. **Load** – Produce a final structured table containing agent metrics.
+4. **Automate** – Use Power Automate to send personalized HTML email reports.
+
+---
+
+## Technologies Used
+
+* Excel
+* Power Query
+* Power Automate
+* HTML email formatting
+
+---
+
+## Repository Structure
+
+data
+│
+├── raw → source CSV and Excel files
+├── transformed → Excel file containing Power Query transformations
+└── output → final metrics table used for reporting
+
+automation
+└── Power Automate flow / screenshots
+
+---
+
+## Outcome
+
+This project demonstrates a practical example of a **data workflow combining data transformation and process automation**.
+
+Raw operational data is transformed into a clean analytical dataset and automatically delivered to end users through personalized email reports.
